@@ -15,7 +15,7 @@ environment {
         stage('Application repository') {
             steps {
                 echo "Cloning application repository"
-                sh 'git clone https://github.com/jcasado6/afs-labs-sutdent'
+                sh 'git clone https://github.com/jcasado6/afs-labs-student'
 		 dir('afs-labs-student') {
                     script {
                         env.APP_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
